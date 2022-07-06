@@ -42,7 +42,7 @@ Suppose at $T=0$, we invest $M_0$ equally into $n_0$ stocks.
 
 At $T=1$, the each stock earned a cumulative return $r_i$ for $ i = 1, \dots, \ n_0$. 
 
-So at $T=1$, the weighting of the $i$-th stock is $w_i = \frac{M_0(1+r_i)/n_0}{M_0\sum_{i=1}^{n_0}(1+r_i)/n_0} = \frac{(1+r_i)}{\sum_{i=1}^{n_0}(1+r_i)}$
+So at $T=1$, the weighting of the $i$-th stock is $w_i = \frac{M_0(1+r_i)/n_0}{M_0\sum_{i=1 to n_0}(1+r_i)/n_0} = \frac{(1+r_i)}{\sum_{i=1}^{n_0}(1+r_i)}$
 
 The portfolio now worths $M_1$. 
 
