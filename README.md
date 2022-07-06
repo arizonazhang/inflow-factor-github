@@ -42,13 +42,13 @@ Suppose at $T=0$, we invest $M_0$ equally into $n_0$ stocks.
 
 At $T=1$, the each stock earned a cumulative return $r_i$ for $ i = 1, \dots, \ n_0$. 
 
-So at $T=1$, the weighting of the $i$-th stock is $w_i = \frac{M_0(1+r_i)/n_0}{M_0\sum_{i=1 to n_0}(1+r_i)/n_0} = \frac{(1+r_i)}{\sum_{i=1}^{n_0}(1+r_i)}$
+So at $T=1$, the weighting of the $i$-th stock is $w_i = \frac{M_0(1+r_i)/n_0}{M_0\sum_{n_0}(1+r_i)/n_0} = \frac{(1+r_i)}{\sum_{n_0}(1+r_i)}$
 
 The portfolio now worths $M_1$. 
 
 Suppose we reinvest this amount equally into $n_1$ stocks, the portion of portfolio that could stay would be 
 
-$x = \sum_{i=1}^{n_0} \mathbb{I}( \text{stock i stay}) \min(M_1/n_1, M_1 w_i)$
+$x = \sum_{n_0} \mathbb{I}( \text{stock i stay}) \min(M_1/n_1, M_1 w_i)$
 
 If all portfolio would be changed, only $\frac{M_1}{1+r_{cost}}$ could be used to buy stocks, so the return need to be discounted with a factor: $\frac{1}{1+r_{cost}}$
 
@@ -58,7 +58,7 @@ After accounting for transaction cost again, the additional value to be invested
 
 In total,  $\frac{M_1}{1+r_{cost}} + \frac{x r_{cost}}{1+r_{cost}}$ could be used to buy stocks.
 
-So the **discount factor** is $D = \frac{1+x r_{cost}/M_1}{1+r_{cost}}$ where $x/M_1 = \sum_{i=1}^{n_0} \mathbb{I}( \text{stock i stay}) \min(1/n_1, w_i))$
+So the **discount factor** is $D = \frac{1+x r_{cost}/M_1}{1+r_{cost}}$ where $x/M_1 = \sum_{n_0} \mathbb{I}( \text{stock i stay}) \min(1/n_1, w_i))$
 
 ### Long-short portfolio
 
@@ -83,13 +83,13 @@ $D_t$ denotes the discount factor at $t$
 
 **long-only, short-only portfolio**
 
-$V_t = \frac{1}{n}\sum_{i=1}^{n}(1+r_{t_0, t, i})D_t V_{t_0}$
+$V_t = \frac{1}{n}\sum_{n}(1+r_{t_0, t, i})D_t V_{t_0}$
 
 $R_t = V_t/V_{t-1}$
 
 **long-short portfolio**
 
-$V_t = (1 + \frac{1}{n_L}\sum_{i=1}^{n_L}(1+r_{t_0, t, i}^L)D_t - \frac{1}{n_S}\sum_{i=1}^{n_S}(1+r_{t_0, t, i}^S)D_t) V_{t_0}$ 
+$V_t = (1 + \frac{1}{n_L}\sum_{n_L}(1+r_{t_0, t, i}^L)D_t - \frac{1}{n_S}\sum_{n_S}(1+r_{t_0, t, i}^S)D_t) V_{t_0}$ 
 
 $R_t = V_t/V_{t-1}$
 
