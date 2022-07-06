@@ -1,0 +1,7 @@
+pandas
+mysql-connector
+pymongo
+numpy
+scipy
+sqlalchemy
+apscheduler
